@@ -6,7 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    Hello, World
-    <script src="./index.js"></script>
+    <div id="app">
+        {{ message }}
+    </div>
+    <script src="./lib/vue.js"></script>
 </body>
+
+<script>
+    var data = {
+        message: "hello, world",
+        num: 1,
+    }
+    var vm = new Vue({
+        el: "#app",
+        data: data,
+        mounted() {
+            console.log(this.message)
+        },
+
+    })
+    console.log(vm.num);
+    
+</script>
 </html>
